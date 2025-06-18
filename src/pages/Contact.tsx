@@ -285,7 +285,7 @@ const Contact = () => {
               </p>
               <Button 
                 asChild
-                className="bg-green-500 hover:bg-green-600 text-white font-semibold"
+                className="bg-brand-green text-black hover:bg-brand-green/90 font-semibold"
               >
                 <a 
                   href="https://wa.me/9779846750524" 

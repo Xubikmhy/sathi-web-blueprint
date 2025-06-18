@@ -55,7 +55,7 @@ const Navigation = () => {
             ))}
             <Button 
               asChild
-              className="bg-white text-brand-blue hover:bg-white/90 font-medium px-6 border border-white/20"
+              className="bg-brand-green text-black hover:bg-brand-green/90 font-medium px-6"
             >
               <Link to="/contact">Get Started</Link>
             </Button>
@@ -91,7 +91,7 @@ const Navigation = () => {
             ))}
             <Button 
               asChild
-              className="bg-white text-brand-blue hover:bg-white/90 font-medium w-full border border-white/20"
+              className="bg-brand-green text-black hover:bg-brand-green/90 font-medium w-full"
             >
               <Link to="/contact" onClick={() => setIsOpen(false)}>Get Started</Link>
             </Button>
