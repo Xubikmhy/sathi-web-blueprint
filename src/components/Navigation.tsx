@@ -33,13 +33,11 @@ const Navigation = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3">
-            <div className="bg-brand-green rounded-lg p-2">
-              <img 
-                src="/lovable-uploads/1aa18539-7d9c-43cb-9616-ae539bc0c586.png" 
-                alt="Tax Sathi Pvt. Ltd. Logo" 
-                className="h-8 w-auto mix-blend-multiply"
-              />
-            </div>
+            <img 
+              src="/lovable-uploads/1aa18539-7d9c-43cb-9616-ae539bc0c586.png" 
+              alt="Tax Sathi Pvt. Ltd. Logo" 
+              className="h-12 w-auto"
+            />
           </Link>
 
           {/* Desktop Navigation */}
@@ -57,7 +55,7 @@ const Navigation = () => {
             ))}
             <Button 
               asChild
-              className="bg-brand-green text-black hover:bg-brand-green/90 font-medium px-6"
+              className="bg-white text-brand-blue hover:bg-white/90 font-medium px-6 border border-white/20"
             >
               <Link to="/contact">Get Started</Link>
             </Button>
@@ -93,7 +91,7 @@ const Navigation = () => {
             ))}
             <Button 
               asChild
-              className="bg-brand-green text-black hover:bg-brand-green/90 font-medium w-full"
+              className="bg-white text-brand-blue hover:bg-white/90 font-medium w-full border border-white/20"
             >
               <Link to="/contact" onClick={() => setIsOpen(false)}>Get Started</Link>
             </Button>
