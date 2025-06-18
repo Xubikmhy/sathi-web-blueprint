@@ -1,4 +1,3 @@
-
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Link } from 'react-router-dom';
@@ -96,11 +95,13 @@ const Index = () => {
         <div className="relative z-10 text-center max-w-4xl mx-auto px-4 animate-fade-in">
           {/* Logo */}
           <div className="flex justify-center mb-8">
-            <img 
-              src="/lovable-uploads/1aa18539-7d9c-43cb-9616-ae539bc0c586.png" 
-              alt="Tax Sathi Pvt. Ltd. Logo" 
-              className="h-32 w-auto shadow-2xl"
-            />
+            <div className="bg-brand-green rounded-xl p-4 shadow-2xl">
+              <img 
+                src="/lovable-uploads/1aa18539-7d9c-43cb-9616-ae539bc0c586.png" 
+                alt="Tax Sathi Pvt. Ltd. Logo" 
+                className="h-24 w-auto mix-blend-multiply"
+              />
+            </div>
           </div>
           
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">

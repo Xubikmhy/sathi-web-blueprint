@@ -10,11 +10,13 @@ const Footer = () => {
           {/* Logo and Description */}
           <div className="space-y-4">
             <Link to="/" className="flex items-center space-x-3">
-              <img 
-                src="/lovable-uploads/1aa18539-7d9c-43cb-9616-ae539bc0c586.png" 
-                alt="Tax Sathi Pvt. Ltd. Logo" 
-                className="h-12 w-auto"
-              />
+              <div className="bg-brand-green rounded-lg p-2">
+                <img 
+                  src="/lovable-uploads/1aa18539-7d9c-43cb-9616-ae539bc0c586.png" 
+                  alt="Tax Sathi Pvt. Ltd. Logo" 
+                  className="h-8 w-auto mix-blend-multiply"
+                />
+              </div>
             </Link>
             <p className="text-white/80 text-sm">
               Where Accuracy Meets Trust. Professional tax advisory and accounting services in Kathmandu.

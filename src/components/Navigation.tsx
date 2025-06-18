@@ -33,11 +33,13 @@ const Navigation = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3">
-            <img 
-              src="/lovable-uploads/1aa18539-7d9c-43cb-9616-ae539bc0c586.png" 
-              alt="Tax Sathi Pvt. Ltd. Logo" 
-              className="h-12 w-auto"
-            />
+            <div className="bg-brand-green rounded-lg p-2">
+              <img 
+                src="/lovable-uploads/1aa18539-7d9c-43cb-9616-ae539bc0c586.png" 
+                alt="Tax Sathi Pvt. Ltd. Logo" 
+                className="h-8 w-auto mix-blend-multiply"
+              />
+            </div>
           </Link>
 
           {/* Desktop Navigation */}
