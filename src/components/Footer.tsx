@@ -9,12 +9,13 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Logo and Description */}
           <div className="space-y-4">
-            <div className="flex items-center space-x-2">
-              <div className="w-10 h-10 bg-brand-green rounded-full flex items-center justify-center">
-                <span className="text-black font-bold text-xl">✓</span>
-              </div>
-              <span className="text-white text-xl font-bold">Tax Sathi</span>
-            </div>
+            <Link to="/" className="flex items-center space-x-3">
+              <img 
+                src="/lovable-uploads/1aa18539-7d9c-43cb-9616-ae539bc0c586.png" 
+                alt="Tax Sathi Pvt. Ltd. Logo" 
+                className="h-12 w-auto"
+              />
+            </Link>
             <p className="text-white/80 text-sm">
               Where Accuracy Meets Trust. Professional tax advisory and accounting services in Kathmandu.
             </p>
@@ -51,10 +52,26 @@ const Footer = () => {
           <div>
             <h3 className="text-white font-semibold mb-4">Services</h3>
             <ul className="space-y-2 text-sm">
-              <li className="text-white/80">Tax Advisory</li>
-              <li className="text-white/80">Bookkeeping</li>
-              <li className="text-white/80">Financial Planning</li>
-              <li className="text-white/80">Payroll Processing</li>
+              <li>
+                <Link to="/services" className="text-white/80 hover:text-brand-green transition-colors">
+                  Tax Advisory
+                </Link>
+              </li>
+              <li>
+                <Link to="/services" className="text-white/80 hover:text-brand-green transition-colors">
+                  Bookkeeping
+                </Link>
+              </li>
+              <li>
+                <Link to="/services" className="text-white/80 hover:text-brand-green transition-colors">
+                  Financial Planning
+                </Link>
+              </li>
+              <li>
+                <Link to="/services" className="text-white/80 hover:text-brand-green transition-colors">
+                  Payroll Processing
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -64,11 +81,15 @@ const Footer = () => {
             <div className="space-y-2">
               <div className="flex items-center space-x-2">
                 <Phone size={16} className="text-brand-green" />
-                <span className="text-white/80 text-sm">+977 9846750524</span>
+                <a href="tel:+9779846750524" className="text-white/80 text-sm hover:text-brand-green transition-colors">
+                  +977 9846750524
+                </a>
               </div>
               <div className="flex items-center space-x-2">
                 <Mail size={16} className="text-brand-green" />
-                <span className="text-white/80 text-sm">ca.sushilkafle@gmail.com</span>
+                <a href="mailto:ca.sushilkafle@gmail.com" className="text-white/80 text-sm hover:text-brand-green transition-colors">
+                  ca.sushilkafle@gmail.com
+                </a>
               </div>
               <div className="flex items-center space-x-2">
                 <MapPin size={16} className="text-brand-green" />

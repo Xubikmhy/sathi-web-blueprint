@@ -96,9 +96,11 @@ const Index = () => {
         <div className="relative z-10 text-center max-w-4xl mx-auto px-4 animate-fade-in">
           {/* Logo */}
           <div className="flex justify-center mb-8">
-            <div className="w-24 h-24 bg-brand-green rounded-full flex items-center justify-center shadow-2xl">
-              <span className="text-black font-bold text-4xl">✓</span>
-            </div>
+            <img 
+              src="/lovable-uploads/1aa18539-7d9c-43cb-9616-ae539bc0c586.png" 
+              alt="Tax Sathi Pvt. Ltd. Logo" 
+              className="h-32 w-auto shadow-2xl"
+            />
           </div>
           
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
@@ -114,13 +116,23 @@ const Index = () => {
             Expert financial solutions for individuals and businesses.
           </p>
           
-          <Button 
-            asChild
-            size="lg"
-            className="bg-brand-green text-black hover:bg-brand-green/90 font-semibold px-8 py-6 text-lg hover-scale"
-          >
-            <Link to="/contact">Get Started Today</Link>
-          </Button>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button 
+              asChild
+              size="lg"
+              className="bg-brand-green text-black hover:bg-brand-green/90 font-semibold px-8 py-6 text-lg hover-scale"
+            >
+              <Link to="/contact">Get Started Today</Link>
+            </Button>
+            <Button 
+              asChild
+              variant="outline"
+              size="lg"
+              className="border-white text-white hover:bg-white hover:text-brand-blue px-8 py-6 text-lg hover-scale"
+            >
+              <Link to="/about">Learn More</Link>
+            </Button>
+          </div>
         </div>
       </section>
 
@@ -140,19 +152,21 @@ const Index = () => {
             {services.map((service, index) => (
               <Card 
                 key={index} 
-                className="bg-white/10 backdrop-blur-sm border-white/20 hover:bg-white/20 transition-all duration-300 hover-scale group"
+                className="bg-white/10 backdrop-blur-sm border-white/20 hover:bg-white/20 transition-all duration-300 hover-scale group cursor-pointer"
               >
-                <CardContent className="p-6 text-center">
-                  <div className="w-16 h-16 bg-brand-green rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                    <service.icon className="w-8 h-8 text-black" />
-                  </div>
-                  <h3 className="text-lg font-semibold text-white mb-3">
-                    {service.title}
-                  </h3>
-                  <p className="text-white/80 text-sm leading-relaxed">
-                    {service.description}
-                  </p>
-                </CardContent>
+                <Link to="/services">
+                  <CardContent className="p-6 text-center">
+                    <div className="w-16 h-16 bg-brand-green rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                      <service.icon className="w-8 h-8 text-black" />
+                    </div>
+                    <h3 className="text-lg font-semibold text-white mb-3">
+                      {service.title}
+                    </h3>
+                    <p className="text-white/80 text-sm leading-relaxed">
+                      {service.description}
+                    </p>
+                  </CardContent>
+                </Link>
               </Card>
             ))}
           </div>
@@ -216,6 +230,12 @@ const Index = () => {
                 <p className="text-white/80">
                   Licensed Chartered Accountant with years of expertise
                 </p>
+                <Link 
+                  to="/about" 
+                  className="inline-block mt-4 text-brand-green hover:text-brand-green/80 transition-colors underline"
+                >
+                  Learn more about our expertise
+                </Link>
               </CardContent>
             </Card>
           </div>

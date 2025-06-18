@@ -32,11 +32,12 @@ const Navigation = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-brand-green rounded-full flex items-center justify-center">
-              <span className="text-black font-bold text-xl">✓</span>
-            </div>
-            <span className="text-white text-xl font-bold">Tax Sathi</span>
+          <Link to="/" className="flex items-center space-x-3">
+            <img 
+              src="/lovable-uploads/1aa18539-7d9c-43cb-9616-ae539bc0c586.png" 
+              alt="Tax Sathi Pvt. Ltd. Logo" 
+              className="h-12 w-auto"
+            />
           </Link>
 
           {/* Desktop Navigation */}
