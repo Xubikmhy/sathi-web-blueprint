@@ -1,0 +1,259 @@
+
+import { Card, CardContent } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { Link } from 'react-router-dom';
+import { 
+  Award, 
+  Users, 
+  Target, 
+  Heart,
+  Mail,
+  Phone,
+  MapPin,
+  CheckCircle
+} from 'lucide-react';
+
+const About = () => {
+  const values = [
+    {
+      icon: Target,
+      title: "Accuracy",
+      description: "We ensure precision in every calculation and report, maintaining the highest standards of accuracy."
+    },
+    {
+      icon: Heart,
+      title: "Trust",
+      description: "Building lasting relationships through transparency, integrity, and reliable service delivery."
+    },
+    {
+      icon: Users,
+      title: "Client Focus",
+      description: "Your success is our priority. We tailor our services to meet your unique business needs."
+    },
+    {
+      icon: Award,
+      title: "Excellence",
+      description: "Committed to delivering exceptional quality in all our professional services and consultations."
+    }
+  ];
+
+  const achievements = [
+    "5+ Years of Professional Experience",
+    "100+ Satisfied Clients",
+    "Licensed Chartered Accountant",
+    "Tax Compliance Specialist",
+    "Business Advisory Expert"
+  ];
+
+  return (
+    <div className="min-h-screen pt-16">
+      {/* Hero Section */}
+      <section className="py-20 bg-gradient-to-br from-brand-blue to-blue-900">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16 animate-fade-in">
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+              About Tax Sathi
+            </h1>
+            <p className="text-xl text-white/80 max-w-3xl mx-auto">
+              Your trusted partner for comprehensive tax advisory and accounting services in Kathmandu
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Mission Section */}
+      <section className="py-20 bg-brand-blue">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-4xl font-bold text-white mb-6">
+                Our Mission
+              </h2>
+              <p className="text-lg text-white/90 mb-6 leading-relaxed">
+                At Tax Sathi Pvt. Ltd., we are dedicated to delivering accurate financial solutions 
+                that empower businesses and individuals to achieve their financial goals. Our mission 
+                is to provide reliable, professional, and comprehensive tax advisory and accounting 
+                services that build lasting relationships with our clients.
+              </p>
+              <p className="text-lg text-white/90 mb-8 leading-relaxed">
+                We believe that where accuracy meets trust, success follows. Our team combines 
+                technical expertise with personalized service to ensure your financial needs 
+                are met with the highest standards of professionalism.
+              </p>
+              <Button 
+                asChild
+                className="bg-brand-green text-black hover:bg-brand-green/90 font-semibold"
+              >
+                <Link to="/services">Explore Our Services</Link>
+              </Button>
+            </div>
+            
+            <div className="grid grid-cols-2 gap-6">
+              {values.map((value, index) => (
+                <Card key={index} className="bg-white/10 backdrop-blur-sm border-white/20 hover:bg-white/20 transition-all duration-300">
+                  <CardContent className="p-6 text-center">
+                    <div className="w-12 h-12 bg-brand-green rounded-full flex items-center justify-center mx-auto mb-4">
+                      <value.icon className="w-6 h-6 text-black" />
+                    </div>
+                    <h3 className="text-lg font-semibold text-white mb-2">
+                      {value.title}
+                    </h3>
+                    <p className="text-white/80 text-sm">
+                      {value.description}
+                    </p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Team Section */}
+      <section className="py-20 bg-gradient-to-r from-brand-blue to-blue-900">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Meet Our Team
+            </h2>
+            <p className="text-xl text-white/80">
+              Experienced professionals committed to your financial success
+            </p>
+          </div>
+
+          <div className="max-w-4xl mx-auto">
+            <Card className="bg-white/10 backdrop-blur-sm border-white/20">
+              <CardContent className="p-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                  <div className="text-center md:text-left">
+                    <div className="w-32 h-32 bg-gradient-to-br from-brand-green to-green-400 rounded-full flex items-center justify-center mx-auto md:mx-0 mb-6">
+                      <span className="text-4xl font-bold text-black">SK</span>
+                    </div>
+                    <h3 className="text-2xl font-bold text-white mb-2">
+                      CA Sushil Kafle
+                    </h3>
+                    <p className="text-brand-green font-semibold mb-4">
+                      Partner & Chartered Accountant
+                    </p>
+                    
+                    <div className="space-y-2 mb-6">
+                      <div className="flex items-center space-x-3">
+                        <Phone className="w-5 h-5 text-brand-green" />
+                        <span className="text-white/90">+977 9846750524</span>
+                      </div>
+                      <div className="flex items-center space-x-3">
+                        <Mail className="w-5 h-5 text-brand-green" />
+                        <span className="text-white/90">ca.sushilkafle@gmail.com</span>
+                      </div>
+                      <div className="flex items-center space-x-3">
+                        <MapPin className="w-5 h-5 text-brand-green" />
+                        <span className="text-white/90">Baneshwor, Kathmandu</span>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div>
+                    <p className="text-white/90 mb-6 leading-relaxed">
+                      CA Sushil Kafle brings over 5 years of experience in tax advisory and 
+                      accounting services. As a licensed Chartered Accountant, he specializes 
+                      in tax compliance, financial planning, and business advisory services for 
+                      businesses across various industries.
+                    </p>
+                    
+                    <div className="space-y-3">
+                      {achievements.map((achievement, index) => (
+                        <div key={index} className="flex items-center space-x-3">
+                          <CheckCircle className="w-5 h-5 text-brand-green" />
+                          <span className="text-white/90">{achievement}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Choose Us */}
+      <section className="py-20 bg-brand-blue">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Why Choose Tax Sathi?
+            </h2>
+            <p className="text-xl text-white/80 max-w-3xl mx-auto">
+              We combine expertise, technology, and personalized service to deliver exceptional results
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <Card className="bg-white/10 backdrop-blur-sm border-white/20 hover:bg-white/20 transition-all duration-300">
+              <CardContent className="p-8 text-center">
+                <div className="w-16 h-16 bg-brand-green rounded-full flex items-center justify-center mx-auto mb-6">
+                  <Award className="w-8 h-8 text-black" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-4">
+                  Professional Excellence
+                </h3>
+                <p className="text-white/80">
+                  Licensed professionals with proven expertise in tax and accounting services.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-white/10 backdrop-blur-sm border-white/20 hover:bg-white/20 transition-all duration-300">
+              <CardContent className="p-8 text-center">
+                <div className="w-16 h-16 bg-brand-green rounded-full flex items-center justify-center mx-auto mb-6">
+                  <Users className="w-8 h-8 text-black" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-4">
+                  Personalized Service
+                </h3>
+                <p className="text-white/80">
+                  Tailored solutions that meet your specific business needs and goals.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-white/10 backdrop-blur-sm border-white/20 hover:bg-white/20 transition-all duration-300">
+              <CardContent className="p-8 text-center">
+                <div className="w-16 h-16 bg-brand-green rounded-full flex items-center justify-center mx-auto mb-6">
+                  <Target className="w-8 h-8 text-black" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-4">
+                  Results Driven
+                </h3>
+                <p className="text-white/80">
+                  Focused on delivering measurable results that contribute to your success.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-br from-brand-blue to-blue-900">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            Let's Work Together
+          </h2>
+          <p className="text-xl text-white/80 mb-8 max-w-2xl mx-auto">
+            Ready to experience the difference professional tax and accounting services can make?
+          </p>
+          <Button 
+            asChild
+            size="lg"
+            className="bg-brand-green text-black hover:bg-brand-green/90 font-semibold px-8 py-6 text-lg hover-scale"
+          >
+            <Link to="/contact">Get in Touch Today</Link>
+          </Button>
+        </div>
+      </section>
+    </div>
+  );
+};
+
+export default About;
