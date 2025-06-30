@@ -36,7 +36,7 @@ const Navigation = () => {
             <img 
               src="/lovable-uploads/1aa18539-7d9c-43cb-9616-ae539bc0c586.png" 
               alt="Tax Sathi Pvt. Ltd. Logo" 
-              className="h-12 w-auto"
+              className="h-12 w-auto drop-shadow-lg"
             />
           </Link>
 
@@ -55,7 +55,7 @@ const Navigation = () => {
             ))}
             <Button 
               asChild
-              className="bg-brand-green text-black hover:bg-brand-green/90 font-medium px-6"
+              className="bg-brand-green text-black hover:bg-brand-green/90 font-semibold px-6 py-2 hover-scale shadow-lg"
             >
               <Link to="/contact">Get Started</Link>
             </Button>
@@ -76,7 +76,7 @@ const Navigation = () => {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="md:hidden bg-brand-blue/95 backdrop-blur-sm rounded-lg mt-2 p-4 space-y-4">
+          <div className="md:hidden bg-brand-blue/95 backdrop-blur-sm rounded-lg mt-2 p-4 space-y-4 shadow-lg">
             {navItems.map((item) => (
               <Link
                 key={item.name}
@@ -91,7 +91,7 @@ const Navigation = () => {
             ))}
             <Button 
               asChild
-              className="bg-brand-green text-black hover:bg-brand-green/90 font-medium w-full"
+              className="bg-brand-green text-black hover:bg-brand-green/90 font-semibold w-full hover-scale shadow-lg"
             >
               <Link to="/contact" onClick={() => setIsOpen(false)}>Get Started</Link>
             </Button>

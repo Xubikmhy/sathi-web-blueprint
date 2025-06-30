@@ -99,7 +99,7 @@ const Index = () => {
             <img 
               src="/lovable-uploads/1aa18539-7d9c-43cb-9616-ae539bc0c586.png" 
               alt="Tax Sathi Pvt. Ltd. Logo" 
-              className="h-32 w-auto shadow-2xl"
+              className="h-32 w-auto drop-shadow-2xl"
             />
           </div>
           
@@ -111,24 +111,23 @@ const Index = () => {
             Where Accuracy Meets Trust
           </p>
           
-          <p className="text-lg text-white/80 mb-12 max-w-2xl mx-auto">
+          <p className="text-lg text-white/80 mb-12 max-w-2xl mx-auto leading-relaxed">
             Professional tax advisory and accounting services in Kathmandu. 
             Expert financial solutions for individuals and businesses.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <Button 
               asChild
               size="lg"
-              className="bg-brand-green text-black hover:bg-brand-green/90 font-semibold px-8 py-6 text-lg hover-scale"
+              className="bg-brand-green text-black hover:bg-brand-green/90 font-semibold px-8 py-6 text-lg hover-scale shadow-lg"
             >
               <Link to="/contact">Get Started Today</Link>
             </Button>
             <Button 
               asChild
-              variant="outline"
               size="lg"
-              className="border-white text-white hover:bg-white hover:text-brand-blue px-8 py-6 text-lg hover-scale"
+              className="bg-brand-green text-black hover:bg-brand-green/90 font-semibold px-8 py-6 text-lg hover-scale shadow-lg"
             >
               <Link to="/about">Learn More</Link>
             </Button>
@@ -137,29 +136,29 @@ const Index = () => {
       </section>
 
       {/* Services Snapshot */}
-      <section className="py-20 bg-brand-blue">
+      <section className="py-24 bg-brand-blue">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
+          <div className="text-center mb-20">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Our Services
             </h2>
-            <p className="text-xl text-white/80 max-w-3xl mx-auto">
+            <p className="text-xl text-white/80 max-w-3xl mx-auto leading-relaxed">
               Comprehensive financial and tax services designed to help your business thrive
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
             {services.map((service, index) => (
               <Card 
                 key={index} 
-                className="bg-white/10 backdrop-blur-sm border-white/20 hover:bg-white/20 transition-all duration-300 hover-scale group cursor-pointer"
+                className="bg-white/10 backdrop-blur-sm border-white/20 hover:bg-white/20 transition-all duration-300 hover-scale group cursor-pointer shadow-lg"
               >
                 <Link to="/services">
-                  <CardContent className="p-6 text-center">
-                    <div className="w-16 h-16 bg-brand-green rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <CardContent className="p-8 text-center">
+                    <div className="w-16 h-16 bg-brand-green rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
                       <service.icon className="w-8 h-8 text-black" />
                     </div>
-                    <h3 className="text-lg font-semibold text-white mb-3">
+                    <h3 className="text-lg font-semibold text-white mb-4">
                       {service.title}
                     </h3>
                     <p className="text-white/80 text-sm leading-relaxed">
@@ -171,12 +170,11 @@ const Index = () => {
             ))}
           </div>
 
-          <div className="text-center mt-12">
+          <div className="text-center mt-16">
             <Button 
               asChild
-              variant="outline"
               size="lg"
-              className="border-brand-green text-brand-green hover:bg-brand-green hover:text-black"
+              className="bg-brand-green text-black hover:bg-brand-green/90 font-semibold px-8 py-4 shadow-lg hover-scale"
             >
               <Link to="/services">View All Services</Link>
             </Button>
@@ -185,9 +183,9 @@ const Index = () => {
       </section>
 
       {/* Trust Signals */}
-      <section className="py-20 bg-gradient-to-r from-brand-blue to-blue-900">
+      <section className="py-24 bg-gradient-to-r from-brand-blue to-blue-900">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
+          <div className="text-center mb-20">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Trusted by Businesses
             </h2>
@@ -196,16 +194,16 @@ const Index = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
             {testimonials.map((testimonial, index) => (
-              <Card key={index} className="bg-white/10 backdrop-blur-sm border-white/20">
-                <CardContent className="p-6">
-                  <div className="flex items-center mb-4">
+              <Card key={index} className="bg-white/10 backdrop-blur-sm border-white/20 hover:bg-white/20 transition-all duration-300 hover-scale shadow-lg">
+                <CardContent className="p-8">
+                  <div className="flex items-center mb-6">
                     {[...Array(testimonial.rating)].map((_, i) => (
                       <Star key={i} className="w-5 h-5 text-brand-green fill-current" />
                     ))}
                   </div>
-                  <p className="text-white/90 mb-4 italic">
+                  <p className="text-white/90 mb-6 italic leading-relaxed">
                     "{testimonial.text}"
                   </p>
                   <div className="text-sm">
@@ -219,23 +217,23 @@ const Index = () => {
 
           {/* CA Certification */}
           <div className="text-center">
-            <Card className="bg-white/10 backdrop-blur-sm border-white/20 inline-block">
-              <CardContent className="p-8">
-                <div className="w-20 h-20 bg-brand-green rounded-full flex items-center justify-center mx-auto mb-4">
+            <Card className="bg-white/10 backdrop-blur-sm border-white/20 inline-block hover:bg-white/20 transition-all duration-300 hover-scale shadow-lg">
+              <CardContent className="p-10">
+                <div className="w-20 h-20 bg-brand-green rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
                   <Award className="w-10 h-10 text-black" />
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-2">
+                <h3 className="text-2xl font-bold text-white mb-4">
                   CA Certified
                 </h3>
-                <p className="text-white/80">
+                <p className="text-white/80 mb-6 leading-relaxed">
                   Licensed Chartered Accountant with years of expertise
                 </p>
-                <Link 
-                  to="/about" 
-                  className="inline-block mt-4 text-brand-green hover:text-brand-green/80 transition-colors underline"
+                <Button
+                  asChild
+                  className="bg-brand-green text-black hover:bg-brand-green/90 font-semibold hover-scale"
                 >
-                  Learn more about our expertise
-                </Link>
+                  <Link to="/about">Learn More About Our Expertise</Link>
+                </Button>
               </CardContent>
             </Card>
           </div>
@@ -243,27 +241,26 @@ const Index = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-brand-blue">
+      <section className="py-24 bg-brand-blue">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
             Ready to Get Started?
           </h2>
-          <p className="text-xl text-white/80 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-white/80 mb-12 max-w-2xl mx-auto leading-relaxed">
             Let us handle your tax and accounting needs so you can focus on growing your business.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <Button 
               asChild
               size="lg"
-              className="bg-brand-green text-black hover:bg-brand-green/90 font-semibold px-8 py-6 text-lg"
+              className="bg-brand-green text-black hover:bg-brand-green/90 font-semibold px-8 py-6 text-lg hover-scale shadow-lg"
             >
               <Link to="/contact">Contact Us Today</Link>
             </Button>
             <Button 
               asChild
-              variant="outline"
               size="lg"
-              className="border-white text-white hover:bg-white hover:text-brand-blue px-8 py-6 text-lg"
+              className="bg-brand-green text-black hover:bg-brand-green/90 font-semibold px-8 py-6 text-lg hover-scale shadow-lg"
             >
               <Link to="/about">Learn More About Us</Link>
             </Button>
