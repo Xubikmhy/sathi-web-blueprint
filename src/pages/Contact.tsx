@@ -48,6 +48,24 @@ const Contact = () => {
     });
   };
 
+  const offices = [
+    {
+      type: "Head Office",
+      location: "Anamanagar, opposite of east gate of Singhadarbar",
+      city: "Kathmandu"
+    },
+    {
+      type: "Branch Office",
+      location: "Opposite of tax office",
+      city: "Butwal"
+    },
+    {
+      type: "Branch Office", 
+      location: "Rambazar, 15",
+      city: "Pokhara"
+    }
+  ];
+
   return (
     <div className="min-h-screen pt-16">
       {/* Hero Section */}
@@ -200,9 +218,15 @@ const Contact = () => {
                       <MapPin className="w-6 h-6 text-black" />
                     </div>
                     <div>
-                      <h3 className="text-lg font-semibold text-white mb-2">Office Location</h3>
-                      <p className="text-white/80">Baneshwor, Kathmandu</p>
-                      <p className="text-white/60 text-sm mt-1">Nepal</p>
+                      <h3 className="text-lg font-semibold text-white mb-2">Office Locations</h3>
+                      <div className="space-y-2">
+                        {offices.map((office, index) => (
+                          <div key={index}>
+                            <p className="text-white/80 font-medium">{office.type} - {office.city}</p>
+                            <p className="text-white/60 text-sm">{office.location}</p>
+                          </div>
+                        ))}
+                      </div>
                     </div>
                   </div>
                 </CardContent>
@@ -238,8 +262,27 @@ const Contact = () => {
               Find Us Here
             </h2>
             <p className="text-xl text-white/80">
-              Visit our office in Baneshwor, Kathmandu
+              Visit our offices across Nepal
             </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+            {offices.map((office, index) => (
+              <Card key={index} className="bg-white/10 backdrop-blur-sm border-white/20">
+                <CardContent className="p-6 text-center">
+                  <MapPin className="w-8 h-8 text-brand-green mx-auto mb-4" />
+                  <h3 className="text-lg font-bold text-white mb-2">
+                    {office.type}
+                  </h3>
+                  <h4 className="text-md font-semibold text-brand-green mb-2">
+                    {office.city}
+                  </h4>
+                  <p className="text-white/80 text-sm">
+                    {office.location}
+                  </p>
+                </CardContent>
+              </Card>
+            ))}
           </div>
 
           <Card className="bg-white/10 backdrop-blur-sm border-white/20 overflow-hidden">
@@ -248,21 +291,21 @@ const Contact = () => {
                 <div className="text-center">
                   <MapPin className="w-16 h-16 text-brand-green mx-auto mb-4" />
                   <h3 className="text-2xl font-bold text-white mb-2">
-                    Baneshwor, Kathmandu
+                    Multiple Locations
                   </h3>
                   <p className="text-white/80 mb-4">
-                    Our office is conveniently located in the heart of Kathmandu
+                    Our offices are conveniently located across Nepal
                   </p>
                   <Button 
                     asChild
                     className="bg-brand-green text-black hover:bg-brand-green/90"
                   >
                     <a 
-                      href="https://maps.google.com/?q=Baneshwor,Kathmandu" 
+                      href="https://maps.google.com/?q=Anamanagar,Kathmandu" 
                       target="_blank" 
                       rel="noopener noreferrer"
                     >
-                      View on Google Maps
+                      View Head Office on Google Maps
                     </a>
                   </Button>
                 </div>
