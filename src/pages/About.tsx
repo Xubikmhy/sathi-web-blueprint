@@ -10,7 +10,8 @@ import {
   Mail,
   Phone,
   MapPin,
-  CheckCircle
+  CheckCircle,
+  Building
 } from 'lucide-react';
 
 const About = () => {
@@ -45,6 +46,47 @@ const About = () => {
     "Business Advisory Expert"
   ];
 
+  const teamMembers = [
+    {
+      name: "CA Sushil Kafle",
+      position: "Chairman",
+      initials: "SK",
+      phone: "+977 9846750524",
+      email: "ca.sushilkafle@gmail.com",
+      description: "CA Sushil Kafle brings over 5 years of experience in tax advisory and accounting services. As a licensed Chartered Accountant, he specializes in tax compliance, financial planning, and business advisory services for businesses across various industries."
+    },
+    {
+      name: "Khagedra Chand",
+      position: "Deputy Manager/Director",
+      initials: "KC",
+      description: "Experienced professional contributing to the strategic direction and management of our operations."
+    },
+    {
+      name: "Sulav Dhoju",
+      position: "Deputy Manager/Director", 
+      initials: "SD",
+      description: "Dedicated professional supporting our commitment to excellence in financial services and client satisfaction."
+    }
+  ];
+
+  const offices = [
+    {
+      type: "Head Office",
+      location: "Anamanagar, opposite of east gate of Singhadarbar",
+      city: "Kathmandu"
+    },
+    {
+      type: "Branch Office",
+      location: "Opposite of tax office",
+      city: "Butwal"
+    },
+    {
+      type: "Branch Office", 
+      location: "Rambazar, 15",
+      city: "Pokhara"
+    }
+  ];
+
   return (
     <div className="min-h-screen pt-16">
       {/* Hero Section */}
@@ -55,7 +97,7 @@ const About = () => {
               About Tax Sathi
             </h1>
             <p className="text-xl text-white/80 max-w-3xl mx-auto leading-relaxed">
-              Your trusted partner for comprehensive tax advisory and accounting services in Kathmandu
+              Your trusted partner for comprehensive tax advisory and accounting services in Nepal
             </p>
           </div>
         </div>
@@ -122,63 +164,98 @@ const About = () => {
             </p>
           </div>
 
-          <div className="max-w-4xl mx-auto">
-            <Card className="bg-white/10 backdrop-blur-sm border-white/20 hover:bg-white/20 transition-all duration-300 hover-scale shadow-lg">
-              <CardContent className="p-10">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                  <div className="text-center md:text-left">
-                    <div className="w-32 h-32 bg-gradient-to-br from-brand-green to-green-400 rounded-full flex items-center justify-center mx-auto md:mx-0 mb-8 shadow-lg">
-                      <span className="text-4xl font-bold text-black">SK</span>
-                    </div>
-                    <h3 className="text-2xl font-bold text-white mb-3">
-                      CA Sushil Kafle
-                    </h3>
-                    <p className="text-brand-green font-semibold mb-6">
-                      Partner & Chartered Accountant
-                    </p>
-                    
-                    <div className="space-y-3 mb-8">
-                      <div className="flex items-center space-x-3">
-                        <Phone className="w-5 h-5 text-brand-green" />
-                        <span className="text-white/90">+977 9846750524</span>
+          <div className="max-w-6xl mx-auto space-y-8">
+            {teamMembers.map((member, index) => (
+              <Card key={index} className="bg-white/10 backdrop-blur-sm border-white/20 hover:bg-white/20 transition-all duration-300 hover-scale shadow-lg">
+                <CardContent className="p-10">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                    <div className="text-center md:text-left">
+                      <div className="w-32 h-32 bg-gradient-to-br from-brand-green to-green-400 rounded-full flex items-center justify-center mx-auto md:mx-0 mb-8 shadow-lg">
+                        <span className="text-4xl font-bold text-black">{member.initials}</span>
                       </div>
-                      <div className="flex items-center space-x-3">
-                        <Mail className="w-5 h-5 text-brand-green" />
-                        <span className="text-white/90">ca.sushilkafle@gmail.com</span>
-                      </div>
-                      <div className="flex items-center space-x-3">
-                        <MapPin className="w-5 h-5 text-brand-green" />
-                        <span className="text-white/90">Baneshwor, Kathmandu</span>
-                      </div>
-                    </div>
-                  </div>
-                  
-                  <div>
-                    <p className="text-white/90 mb-8 leading-relaxed">
-                      CA Sushil Kafle brings over 5 years of experience in tax advisory and 
-                      accounting services. As a licensed Chartered Accountant, he specializes 
-                      in tax compliance, financial planning, and business advisory services for 
-                      businesses across various industries.
-                    </p>
-                    
-                    <div className="space-y-4">
-                      {achievements.map((achievement, index) => (
-                        <div key={index} className="flex items-center space-x-3">
-                          <CheckCircle className="w-5 h-5 text-brand-green" />
-                          <span className="text-white/90">{achievement}</span>
+                      <h3 className="text-2xl font-bold text-white mb-3">
+                        {member.name}
+                      </h3>
+                      <p className="text-brand-green font-semibold mb-6">
+                        {member.position}
+                      </p>
+                      
+                      {member.phone && member.email && (
+                        <div className="space-y-3 mb-8">
+                          <div className="flex items-center space-x-3">
+                            <Phone className="w-5 h-5 text-brand-green" />
+                            <span className="text-white/90">{member.phone}</span>
+                          </div>
+                          <div className="flex items-center space-x-3">
+                            <Mail className="w-5 h-5 text-brand-green" />
+                            <span className="text-white/90">{member.email}</span>
+                          </div>
                         </div>
-                      ))}
+                      )}
+                    </div>
+                    
+                    <div>
+                      <p className="text-white/90 mb-8 leading-relaxed">
+                        {member.description}
+                      </p>
+                      
+                      {index === 0 && (
+                        <div className="space-y-4">
+                          {achievements.map((achievement, idx) => (
+                            <div key={idx} className="flex items-center space-x-3">
+                              <CheckCircle className="w-5 h-5 text-brand-green" />
+                              <span className="text-white/90">{achievement}</span>
+                            </div>
+                          ))}
+                        </div>
+                      )}
                     </div>
                   </div>
-                </div>
-              </CardContent>
-            </Card>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Office Locations */}
+      <section className="py-24 bg-brand-blue">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-20">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
+              Our Locations
+            </h2>
+            <p className="text-xl text-white/80">
+              Serving clients across Nepal with multiple office locations
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+            {offices.map((office, index) => (
+              <Card key={index} className="bg-white/10 backdrop-blur-sm border-white/20 hover:bg-white/20 transition-all duration-300 hover-scale shadow-lg">
+                <CardContent className="p-10 text-center">
+                  <div className="w-16 h-16 bg-brand-green rounded-full flex items-center justify-center mx-auto mb-8 shadow-lg">
+                    <Building className="w-8 h-8 text-black" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-2">
+                    {office.type}
+                  </h3>
+                  <h4 className="text-lg font-semibold text-brand-green mb-4">
+                    {office.city}
+                  </h4>
+                  <div className="flex items-center justify-center space-x-3">
+                    <MapPin className="w-5 h-5 text-brand-green" />
+                    <span className="text-white/90 text-sm">{office.location}</span>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-24 bg-brand-blue">
+      <section className="py-24 bg-gradient-to-r from-brand-blue to-blue-900">
         <div className="container mx-auto px-4">
           <div className="text-center mb-20">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
@@ -236,7 +313,7 @@ const About = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 bg-gradient-to-br from-brand-blue to-blue-900">
+      <section className="py-24 bg-brand-blue">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
             Let's Work Together
