@@ -79,18 +79,18 @@ const Dashboard = () => {
 
   if (!user) {
     return (
-      <div className="min-h-screen bg-slate-50 flex items-center justify-center">
+      <div className="min-h-screen bg-blue-50 flex items-center justify-center">
         <div className="text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500 mx-auto mb-4"></div>
-          <p className="text-slate-600">Loading...</p>
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
+          <p className="text-blue-600">Loading...</p>
         </div>
       </div>
     );
   }
 
   return (
-    <div className="min-h-screen bg-slate-50">
-      <header className="bg-white border-b border-slate-200 professional-shadow">
+    <div className="min-h-screen bg-blue-50">
+      <header className="bg-white border-b border-blue-100 shadow-sm">
         <div className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-4">
@@ -100,14 +100,14 @@ const Dashboard = () => {
                 className="h-10 w-auto"
               />
               <div>
-                <h1 className="text-2xl font-bold text-slate-900">Dashboard</h1>
-                <p className="text-slate-600">Welcome back, {profile?.full_name || user.email}</p>
+                <h1 className="text-2xl font-bold text-blue-800">Dashboard</h1>
+                <p className="text-blue-600">Welcome back, {profile?.full_name || user.email}</p>
               </div>
             </div>
             <Button
               onClick={handleSignOut}
               variant="outline"
-              className="border-slate-300 text-slate-700 hover:bg-slate-50 hover:text-slate-900"
+              className="border-blue-200 text-blue-700 hover:bg-blue-50 hover:text-blue-800"
             >
               <LogOut size={16} className="mr-2" />
               Sign Out
@@ -118,38 +118,38 @@ const Dashboard = () => {
 
       <main className="container mx-auto px-6 py-8">
         <Tabs defaultValue="clients" className="w-full">
-          <TabsList className="grid w-full grid-cols-5 mb-8 bg-white border border-slate-200 p-1 rounded-lg professional-shadow">
+          <TabsList className="grid w-full grid-cols-5 mb-8 bg-white border border-blue-100 p-1 rounded-lg shadow-sm">
             <TabsTrigger 
               value="clients" 
-              className="flex items-center space-x-2 data-[state=active]:bg-blue-500 data-[state=active]:text-white rounded-md transition-all"
+              className="flex items-center space-x-2 data-[state=active]:bg-blue-600 data-[state=active]:text-white rounded-md transition-all text-blue-700"
             >
               <Users size={16} />
               <span>Clients</span>
             </TabsTrigger>
             <TabsTrigger 
               value="services" 
-              className="flex items-center space-x-2 data-[state=active]:bg-blue-500 data-[state=active]:text-white rounded-md transition-all"
+              className="flex items-center space-x-2 data-[state=active]:bg-green-600 data-[state=active]:text-white rounded-md transition-all text-green-700"
             >
               <Briefcase size={16} />
               <span>Services</span>
             </TabsTrigger>
             <TabsTrigger 
               value="documents" 
-              className="flex items-center space-x-2 data-[state=active]:bg-blue-500 data-[state=active]:text-white rounded-md transition-all"
+              className="flex items-center space-x-2 data-[state=active]:bg-blue-600 data-[state=active]:text-white rounded-md transition-all text-blue-700"
             >
               <FileText size={16} />
               <span>Documents</span>
             </TabsTrigger>
             <TabsTrigger 
               value="appointments" 
-              className="flex items-center space-x-2 data-[state=active]:bg-blue-500 data-[state=active]:text-white rounded-md transition-all"
+              className="flex items-center space-x-2 data-[state=active]:bg-green-600 data-[state=active]:text-white rounded-md transition-all text-green-700"
             >
               <Calendar size={16} />
               <span>Appointments</span>
             </TabsTrigger>
             <TabsTrigger 
               value="inquiries" 
-              className="flex items-center space-x-2 data-[state=active]:bg-blue-500 data-[state=active]:text-white rounded-md transition-all"
+              className="flex items-center space-x-2 data-[state=active]:bg-blue-600 data-[state=active]:text-white rounded-md transition-all text-blue-700"
             >
               <MessageSquare size={16} />
               <span>Inquiries</span>

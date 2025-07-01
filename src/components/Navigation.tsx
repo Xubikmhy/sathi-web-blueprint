@@ -49,7 +49,7 @@ const Navigation = () => {
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      scrolled ? 'bg-brand-blue/95 backdrop-blur-sm shadow-lg' : 'bg-transparent'
+      scrolled ? 'bg-blue-600/95 backdrop-blur-sm shadow-lg' : 'bg-transparent'
     }`}>
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
@@ -68,8 +68,8 @@ const Navigation = () => {
               <Link
                 key={item.name}
                 to={item.path}
-                className={`text-white hover:text-brand-green transition-colors duration-300 font-medium ${
-                  location.pathname === item.path ? 'text-brand-green' : ''
+                className={`text-white hover:text-green-300 transition-colors duration-300 font-medium ${
+                  location.pathname === item.path ? 'text-green-300' : ''
                 }`}
               >
                 {item.name}
@@ -78,7 +78,7 @@ const Navigation = () => {
             {user ? (
               <Button 
                 asChild
-                className="bg-brand-green text-black hover:bg-brand-green/90 font-semibold px-6 py-2 hover-scale shadow-lg"
+                className="bg-green-500 text-white hover:bg-green-600 font-semibold px-6 py-2 hover-scale shadow-lg"
               >
                 <Link to="/dashboard">
                   <User size={16} className="mr-2" />
@@ -88,7 +88,7 @@ const Navigation = () => {
             ) : (
               <Button 
                 asChild
-                className="bg-brand-green text-black hover:bg-brand-green/90 font-semibold px-6 py-2 hover-scale shadow-lg"
+                className="bg-green-500 text-white hover:bg-green-600 font-semibold px-6 py-2 hover-scale shadow-lg"
               >
                 <Link to="/auth">Login</Link>
               </Button>
@@ -101,7 +101,7 @@ const Navigation = () => {
               variant="ghost"
               size="icon"
               onClick={() => setIsOpen(!isOpen)}
-              className="text-white hover:text-brand-green"
+              className="text-white hover:text-green-300"
             >
               {isOpen ? <X size={24} /> : <Menu size={24} />}
             </Button>
@@ -110,13 +110,13 @@ const Navigation = () => {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="md:hidden bg-brand-blue/95 backdrop-blur-sm rounded-lg mt-2 p-4 space-y-4 shadow-lg">
+          <div className="md:hidden bg-blue-600/95 backdrop-blur-sm rounded-lg mt-2 p-4 space-y-4 shadow-lg">
             {navItems.map((item) => (
               <Link
                 key={item.name}
                 to={item.path}
-                className={`block text-white hover:text-brand-green transition-colors duration-300 font-medium py-2 ${
-                  location.pathname === item.path ? 'text-brand-green' : ''
+                className={`block text-white hover:text-green-300 transition-colors duration-300 font-medium py-2 ${
+                  location.pathname === item.path ? 'text-green-300' : ''
                 }`}
                 onClick={() => setIsOpen(false)}
               >
@@ -126,7 +126,7 @@ const Navigation = () => {
             {user ? (
               <Button 
                 asChild
-                className="bg-brand-green text-black hover:bg-brand-green/90 font-semibold w-full hover-scale shadow-lg"
+                className="bg-green-500 text-white hover:bg-green-600 font-semibold w-full hover-scale shadow-lg"
               >
                 <Link to="/dashboard" onClick={() => setIsOpen(false)}>
                   <User size={16} className="mr-2" />
@@ -136,7 +136,7 @@ const Navigation = () => {
             ) : (
               <Button 
                 asChild
-                className="bg-brand-green text-black hover:bg-brand-green/90 font-semibold w-full hover-scale shadow-lg"
+                className="bg-green-500 text-white hover:bg-green-600 font-semibold w-full hover-scale shadow-lg"
               >
                 <Link to="/auth" onClick={() => setIsOpen(false)}>Login</Link>
               </Button>

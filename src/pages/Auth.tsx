@@ -96,7 +96,7 @@ const Auth = () => {
   };
 
   return (
-    <div className="min-h-screen bg-brand-blue flex items-center justify-center px-4">
+    <div className="min-h-screen bg-gradient-to-br from-blue-600 to-blue-800 flex items-center justify-center px-4">
       <div className="w-full max-w-md">
         <div className="text-center mb-8">
           <Link to="/" className="inline-block">
@@ -108,22 +108,22 @@ const Auth = () => {
           </Link>
         </div>
 
-        <Card className="bg-white/95 backdrop-blur-sm shadow-2xl">
+        <Card className="bg-white/95 backdrop-blur-sm shadow-2xl border-blue-100">
           <CardHeader className="text-center">
-            <CardTitle className="text-2xl font-bold text-brand-blue">Welcome</CardTitle>
-            <CardDescription>Access your Tax Sathi dashboard</CardDescription>
+            <CardTitle className="text-2xl font-bold text-blue-800">Welcome</CardTitle>
+            <CardDescription className="text-blue-600">Access your Tax Sathi dashboard</CardDescription>
           </CardHeader>
           <CardContent>
             <Tabs defaultValue="signin" className="w-full">
-              <TabsList className="grid w-full grid-cols-2">
-                <TabsTrigger value="signin">Sign In</TabsTrigger>
-                <TabsTrigger value="signup">Sign Up</TabsTrigger>
+              <TabsList className="grid w-full grid-cols-2 bg-blue-50">
+                <TabsTrigger value="signin" className="data-[state=active]:bg-blue-600 data-[state=active]:text-white text-blue-700">Sign In</TabsTrigger>
+                <TabsTrigger value="signup" className="data-[state=active]:bg-green-600 data-[state=active]:text-white text-green-700">Sign Up</TabsTrigger>
               </TabsList>
               
               <TabsContent value="signin">
                 <form onSubmit={handleSignIn} className="space-y-4">
                   <div className="space-y-2">
-                    <Label htmlFor="signin-email">Email</Label>
+                    <Label htmlFor="signin-email" className="text-blue-800">Email</Label>
                     <Input
                       id="signin-email"
                       name="email"
@@ -133,7 +133,7 @@ const Auth = () => {
                     />
                   </div>
                   <div className="space-y-2">
-                    <Label htmlFor="signin-password">Password</Label>
+                    <Label htmlFor="signin-password" className="text-blue-800">Password</Label>
                     <Input
                       id="signin-password"
                       name="password"
@@ -144,7 +144,7 @@ const Auth = () => {
                   </div>
                   <Button 
                     type="submit" 
-                    className="w-full bg-brand-green hover:bg-brand-green/90"
+                    className="w-full bg-blue-600 hover:bg-blue-700 text-white"
                     disabled={loading}
                   >
                     {loading ? 'Signing in...' : 'Sign In'}
@@ -155,7 +155,7 @@ const Auth = () => {
               <TabsContent value="signup">
                 <form onSubmit={handleSignUp} className="space-y-4">
                   <div className="space-y-2">
-                    <Label htmlFor="signup-name">Full Name</Label>
+                    <Label htmlFor="signup-name" className="text-blue-800">Full Name</Label>
                     <Input
                       id="signup-name"
                       name="fullName"
@@ -165,7 +165,7 @@ const Auth = () => {
                     />
                   </div>
                   <div className="space-y-2">
-                    <Label htmlFor="signup-email">Email</Label>
+                    <Label htmlFor="signup-email" className="text-blue-800">Email</Label>
                     <Input
                       id="signup-email"
                       name="email"
@@ -175,7 +175,7 @@ const Auth = () => {
                     />
                   </div>
                   <div className="space-y-2">
-                    <Label htmlFor="signup-password">Password</Label>
+                    <Label htmlFor="signup-password" className="text-blue-800">Password</Label>
                     <Input
                       id="signup-password"
                       name="password"
@@ -187,7 +187,7 @@ const Auth = () => {
                   </div>
                   <Button 
                     type="submit" 
-                    className="w-full bg-brand-green hover:bg-brand-green/90"
+                    className="w-full bg-green-600 hover:bg-green-700 text-white"
                     disabled={loading}
                   >
                     {loading ? 'Creating account...' : 'Sign Up'}
@@ -201,7 +201,7 @@ const Auth = () => {
         <div className="text-center mt-6">
           <Link 
             to="/" 
-            className="text-white hover:text-brand-green transition-colors"
+            className="text-blue-100 hover:text-green-300 transition-colors"
           >
             ← Back to Home
           </Link>
