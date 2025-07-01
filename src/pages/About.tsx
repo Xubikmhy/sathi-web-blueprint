@@ -1,6 +1,7 @@
 
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
+import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
 import { Link } from 'react-router-dom';
 import { 
   Award, 
@@ -170,9 +171,22 @@ const About = () => {
                 <CardContent className="p-10">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                     <div className="text-center md:text-left">
-                      <div className="w-32 h-32 bg-gradient-to-br from-brand-green to-green-400 rounded-full flex items-center justify-center mx-auto md:mx-0 mb-8 shadow-lg">
-                        <span className="text-4xl font-bold text-black">{member.initials}</span>
-                      </div>
+                      {index === 0 ? (
+                        <Avatar className="w-32 h-32 mx-auto md:mx-0 mb-8 shadow-lg">
+                          <AvatarImage 
+                            src="/lovable-uploads/07a6c5d1-50b6-4ef7-9d46-dc3356fe4df2.png" 
+                            alt="CA Sushil Kafle"
+                            className="object-cover"
+                          />
+                          <AvatarFallback className="bg-gradient-to-br from-brand-green to-green-400 text-4xl font-bold text-black">
+                            {member.initials}
+                          </AvatarFallback>
+                        </Avatar>
+                      ) : (
+                        <div className="w-32 h-32 bg-gradient-to-br from-brand-green to-green-400 rounded-full flex items-center justify-center mx-auto md:mx-0 mb-8 shadow-lg">
+                          <span className="text-4xl font-bold text-black">{member.initials}</span>
+                        </div>
+                      )}
                       <h3 className="text-2xl font-bold text-white mb-3">
                         {member.name}
                       </h3>
