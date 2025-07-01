@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -11,7 +10,7 @@ import { supabase } from '@/integrations/supabase/client';
 import { toast } from 'sonner';
 import { Plus, Download, Trash2, FileText } from 'lucide-react';
 
-interface Document {
+interface DocumentRecord {
   id: string;
   name: string;
   file_path: string;
@@ -40,7 +39,7 @@ interface Service {
 }
 
 const DocumentsTab = () => {
-  const [documents, setDocuments] = useState<Document[]>([]);
+  const [documents, setDocuments] = useState<DocumentRecord[]>([]);
   const [clients, setClients] = useState<Client[]>([]);
   const [services, setServices] = useState<Service[]>([]);
   const [loading, setLoading] = useState(true);
@@ -145,6 +144,7 @@ const DocumentsTab = () => {
         document_type: formData.get('document_type') as 'tax_return' | 'financial_statement' | 'receipt' | 'contract' | 'other',
         client_id: formData.get('client_id') as string || null,
         service_id: formData.get('service_id') as string || null,
+        user_id: user.id,
       };
 
       const { error: dbError } = await supabase
@@ -167,7 +167,7 @@ const DocumentsTab = () => {
     setUploading(false);
   };
 
-  const handleDownload = async (document: Document) => {
+  const handleDownload = async (document: DocumentRecord) => {
     try {
       const { data, error } = await supabase.storage
         .from('documents')
@@ -179,12 +179,12 @@ const DocumentsTab = () => {
 
       // Create download link
       const url = URL.createObjectURL(data);
-      const a = document.createElement('a');
+      const a = window.document.createElement('a');
       a.href = url;
       a.download = document.name;
-      document.body.appendChild(a);
+      window.document.body.appendChild(a);
       a.click();
-      document.body.removeChild(a);
+      window.document.body.removeChild(a);
       URL.revokeObjectURL(url);
       
     } catch (error) {
@@ -193,7 +193,7 @@ const DocumentsTab = () => {
     }
   };
 
-  const handleDelete = async (document: Document) => {
+  const handleDelete = async (document: DocumentRecord) => {
     if (confirm('Are you sure you want to delete this document?')) {
       try {
         // Delete from storage

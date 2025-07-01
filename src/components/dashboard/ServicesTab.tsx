@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -81,6 +80,14 @@ const ServicesTab = () => {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    
+    // Get current user
+    const { data: { user } } = await supabase.auth.getUser();
+    if (!user) {
+      toast.error('User not authenticated');
+      return;
+    }
+
     const formData = new FormData(e.currentTarget);
     
     const serviceData = {
@@ -93,6 +100,7 @@ const ServicesTab = () => {
       completion_date: formData.get('completion_date') as string || null,
       amount: formData.get('amount') ? parseFloat(formData.get('amount') as string) : null,
       notes: formData.get('notes') as string || null,
+      user_id: user.id,
     };
 
     if (editingService) {

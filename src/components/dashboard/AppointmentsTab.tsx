@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -79,6 +78,14 @@ const AppointmentsTab = () => {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    
+    // Get current user
+    const { data: { user } } = await supabase.auth.getUser();
+    if (!user) {
+      toast.error('User not authenticated');
+      return;
+    }
+
     const formData = new FormData(e.currentTarget);
     
     const appointmentData = {
@@ -89,6 +96,7 @@ const AppointmentsTab = () => {
       location: formData.get('location') as string || null,
       status: formData.get('status') as string,
       client_id: formData.get('client_id') as string || null,
+      user_id: user.id,
     };
 
     if (editingAppointment) {
