@@ -54,19 +54,22 @@ const About = () => {
       initials: "SK",
       phone: "+977 9846750524",
       email: "ca.sushilkafle@gmail.com",
-      description: "CA Sushil Kafle brings over 5 years of experience in tax advisory and accounting services. As a licensed Chartered Accountant, he specializes in tax compliance, financial planning, and business advisory services for businesses across various industries."
+      description: "CA Sushil Kafle brings over 5 years of experience in tax advisory and accounting services. As a licensed Chartered Accountant, he specializes in tax compliance, financial planning, and business advisory services for businesses across various industries.",
+      image: "/lovable-uploads/0e8059b3-cc37-4e5c-b76b-2f1606ec29f5.png"
     },
     {
-      name: "Khagedra Chand",
+      name: "Khagendra Chand",
       position: "Deputy Manager/Director",
       initials: "KC",
-      description: "Experienced professional contributing to the strategic direction and management of our operations."
+      description: "Experienced professional contributing to the strategic direction and management of our operations.",
+      image: "/lovable-uploads/cb335f14-2346-4558-8ec4-a4697af349e8.png"
     },
     {
       name: "Sulav Dhoju",
       position: "Deputy Manager/Director", 
       initials: "SD",
-      description: "Dedicated professional supporting our commitment to excellence in financial services and client satisfaction."
+      description: "Dedicated professional supporting our commitment to excellence in financial services and client satisfaction.",
+      image: "/lovable-uploads/93e6419a-89d3-42bf-b5f9-4311c8c3ce1c.png"
     }
   ];
 
@@ -171,22 +174,16 @@ const About = () => {
                 <CardContent className="p-10">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                     <div className="text-center md:text-left">
-                      {index === 0 ? (
-                        <Avatar className="w-32 h-32 mx-auto md:mx-0 mb-8 shadow-lg">
-                          <AvatarImage 
-                            src="/lovable-uploads/07a6c5d1-50b6-4ef7-9d46-dc3356fe4df2.png" 
-                            alt="CA Sushil Kafle"
-                            className="object-cover"
-                          />
-                          <AvatarFallback className="bg-gradient-to-br from-brand-green to-green-400 text-4xl font-bold text-black">
-                            {member.initials}
-                          </AvatarFallback>
-                        </Avatar>
-                      ) : (
-                        <div className="w-32 h-32 bg-gradient-to-br from-brand-green to-green-400 rounded-full flex items-center justify-center mx-auto md:mx-0 mb-8 shadow-lg">
-                          <span className="text-4xl font-bold text-black">{member.initials}</span>
-                        </div>
-                      )}
+                      <Avatar className="w-32 h-32 mx-auto md:mx-0 mb-8 shadow-lg">
+                        <AvatarImage 
+                          src={member.image} 
+                          alt={member.name}
+                          className="object-cover"
+                        />
+                        <AvatarFallback className="bg-gradient-to-br from-brand-green to-green-400 text-4xl font-bold text-black">
+                          {member.initials}
+                        </AvatarFallback>
+                      </Avatar>
                       <h3 className="text-2xl font-bold text-white mb-3">
                         {member.name}
                       </h3>
