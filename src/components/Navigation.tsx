@@ -1,16 +1,12 @@
 
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, User } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { supabase } from '@/integrations/supabase/client';
-import { User as SupabaseUser, Session } from '@supabase/supabase-js';
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [user, setUser] = useState<SupabaseUser | null>(null);
-  const [session, setSession] = useState<Session | null>(null);
   const location = useLocation();
 
   useEffect(() => {
@@ -20,24 +16,6 @@ const Navigation = () => {
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  useEffect(() => {
-    // Set up auth state listener
-    const { data: { subscription } } = supabase.auth.onAuthStateChange(
-      (event, session) => {
-        setSession(session);
-        setUser(session?.user ?? null);
-      }
-    );
-
-    // Check for existing session
-    supabase.auth.getSession().then(({ data: { session } }) => {
-      setSession(session);
-      setUser(session?.user ?? null);
-    });
-
-    return () => subscription.unsubscribe();
   }, []);
 
   const navItems = [
@@ -75,24 +53,6 @@ const Navigation = () => {
                 {item.name}
               </Link>
             ))}
-            {user ? (
-              <Button 
-                asChild
-                className="bg-green-500 text-white hover:bg-green-600 font-semibold px-6 py-2 hover-scale shadow-lg"
-              >
-                <Link to="/dashboard">
-                  <User size={16} className="mr-2" />
-                  Dashboard
-                </Link>
-              </Button>
-            ) : (
-              <Button 
-                asChild
-                className="bg-green-500 text-white hover:bg-green-600 font-semibold px-6 py-2 hover-scale shadow-lg"
-              >
-                <Link to="/auth">Login</Link>
-              </Button>
-            )}
           </div>
 
           {/* Mobile menu button */}
@@ -123,24 +83,6 @@ const Navigation = () => {
                 {item.name}
               </Link>
             ))}
-            {user ? (
-              <Button 
-                asChild
-                className="bg-green-500 text-white hover:bg-green-600 font-semibold w-full hover-scale shadow-lg"
-              >
-                <Link to="/dashboard" onClick={() => setIsOpen(false)}>
-                  <User size={16} className="mr-2" />
-                  Dashboard
-                </Link>
-              </Button>
-            ) : (
-              <Button 
-                asChild
-                className="bg-green-500 text-white hover:bg-green-600 font-semibold w-full hover-scale shadow-lg"
-              >
-                <Link to="/auth" onClick={() => setIsOpen(false)}>Login</Link>
-              </Button>
-            )}
           </div>
         )}
       </div>
