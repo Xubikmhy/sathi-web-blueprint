@@ -67,16 +67,17 @@ const About = () => {
         "5+ Years of Professional Experience",
         "100+ Satisfied Clients",
         "Financial Management Expert",
-        "International Money Transfer Specialist",
+        "Risk Management Specialist",
+        "International Investment Expert",
         "Client Relations Specialist",
         "Corporate Strategy Advisor"
       ]
     },
     {
-      name: "Sulav Dhoju",
+      name: "Sulab Dhunju",
       position: "Executive Director", 
       initials: "SD",
-      description: "Sulav Dhoju contributes over 5 years of expertise in strategic oversight and business development to Tax Sathi. He specializes in operational leadership and client engagement, driving innovative financial solutions for Nepal's businesses with vision and precision.",
+      description: "Sulab Dhunju contributes over 5 years of expertise in strategic oversight and business development to Tax Sathi. He specializes in operational leadership and client engagement, driving innovative financial solutions for Nepal's businesses with vision and precision.",
       image: "/lovable-uploads/93e6419a-89d3-42bf-b5f9-4311c8c3ce1c.png",
       achievements: [
         "5+ Years of Professional Experience",
@@ -93,7 +94,8 @@ const About = () => {
     {
       type: "Head Office",
       location: "Anamanagar, opposite of east gate of Singhadarbar",
-      city: "Kathmandu"
+      city: "Kathmandu",
+      contact: "Anamanagar, opposite of east Singhadarbar gate"
     },
     {
       type: "Branch Office",

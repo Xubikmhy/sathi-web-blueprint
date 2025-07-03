@@ -51,7 +51,7 @@ const Contact = () => {
   const offices = [
     {
       type: "Head Office",
-      location: "Anamanagar, opposite of east gate of Singhadarbar",
+      location: "Anamanagar, opposite of east Singhadarbar gate",
       city: "Kathmandu"
     },
     {
