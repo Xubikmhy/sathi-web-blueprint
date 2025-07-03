@@ -46,12 +46,13 @@ const About = () => {
       initials: "SK",
       phone: "+977 9846750524",
       email: "ca.sushilkafle@gmail.com",
-      description: "Sushil Kafle brings over 5 years of experience in tax advisory and accounting services to Tax Sathi. As a licensed Chartered Accountant, he specializes in tax compliance and strategic financial planning, guiding businesses across Nepal's industries with innovative and compliant solutions.",
+      description: "Sushil Kafle brings over 5 years of experience in tax advisory and accounting services to Tax Sathi. As a licensed Chartered Accountant, he specializes in cross-border investment, tax compliance and strategic financial planning, guiding businesses across Nepal's industries with innovative and compliant solutions.",
       image: "/lovable-uploads/0e8059b3-cc37-4e5c-b76b-2f1606ec29f5.png",
       achievements: [
         "5+ Years of Professional Experience",
         "100+ Satisfied Clients",
         "Licensed Chartered Accountant",
+        "Cross-Border Investment Specialist", 
         "FDI & Foreign Direct Investment Expert",
         "Tax Compliance Specialist",
         "Strategic Financial Planner"
@@ -59,33 +60,62 @@ const About = () => {
     },
     {
       name: "Khagendra Chand",
-      position: "Director",
+      position: "Chief Financial Officer",
       initials: "KC",
-      description: "Khagendra Chand offers over 5 years of expertise in financial management and business consulting at Tax Sathi. He excels in corporate financial strategy and client relations, delivering tailored solutions for Nepal's diverse sectors, ensuring operational excellence and client satisfaction.",
+      description: "Khagendra Chand offers over 5 years of expertise in financial management and business consulting at Tax Sathi. As Chief Financial Officer, he excels in corporate financial strategy, risk management and client relations, delivering tailored solutions for Nepal's diverse sectors.",
       image: "/lovable-uploads/cb335f14-2346-4558-8ec4-a4697af349e8.png",
       achievements: [
-        "5+ Years of Professional Experience",
+        "5+ Years of Professional Experience", 
         "100+ Satisfied Clients",
-        "Financial Management Expert",
+        "Chief Financial Officer",
         "Risk Management Specialist",
         "International Investment Expert",
-        "Client Relations Specialist",
-        "Corporate Strategy Advisor"
+        "Financial Strategy Expert",
+        "Corporate Financial Planning"
       ]
     },
     {
       name: "Sulab Dhunju",
-      position: "Executive Director", 
+      position: "Chief Operating Officer", 
       initials: "SD",
-      description: "Sulab Dhunju contributes over 5 years of expertise in strategic oversight and business development to Tax Sathi. He specializes in operational leadership and client engagement, driving innovative financial solutions for Nepal's businesses with vision and precision.",
+      description: "Sulab Dhunju contributes over 5 years of expertise in strategic oversight and business operations to Tax Sathi. As Chief Operating Officer, he specializes in operational excellence, due diligence processes and business development, driving innovative financial solutions.",
       image: "/lovable-uploads/93e6419a-89d3-42bf-b5f9-4311c8c3ce1c.png",
       achievements: [
         "5+ Years of Professional Experience",
-        "100+ Satisfied Clients",
+        "100+ Satisfied Clients", 
+        "Chief Operating Officer",
         "Due Diligence Specialist",
-        "Operational Leadership Expert",
-        "Business Development Specialist",
-        "Client Engagement Expert"
+        "Operational Excellence Expert",
+        "Business Process Optimization",
+        "Strategic Operations Management"
+      ]
+    },
+    {
+      name: "Subash Aryal",
+      position: "Marketing Manager",
+      initials: "SA",
+      description: "Subash Aryal brings dynamic marketing expertise and strategic communication skills to Tax Sathi. As Marketing Manager, he specializes in brand development, client outreach and digital marketing strategies, ensuring Tax Sathi's services reach the right audience effectively.",
+      image: "/lovable-uploads/93e6419a-89d3-42bf-b5f9-4311c8c3ce1c.png",
+      achievements: [
+        "Marketing Strategy Expert",
+        "Brand Development Specialist",
+        "Digital Marketing Professional",
+        "Client Outreach Coordinator",
+        "Communication Strategy Expert"
+      ]
+    },
+    {
+      name: "Sushila Basnet",
+      position: "Executive Director",
+      initials: "SB", 
+      description: "Sushila Basnet contributes extensive expertise in media and mass communication to Tax Sathi. As Executive Director, she specializes in strategic communications, public relations and stakeholder engagement, bridging the gap between complex financial services and clear client communication.",
+      image: "/lovable-uploads/93e6419a-89d3-42bf-b5f9-4311c8c3ce1c.png",
+      achievements: [
+        "Media & Mass Communication Expert",
+        "Strategic Communications Leader",
+        "Public Relations Specialist", 
+        "Stakeholder Engagement Expert",
+        "Corporate Communications Director"
       ]
     }
   ];
