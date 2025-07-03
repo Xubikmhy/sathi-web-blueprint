@@ -39,14 +39,6 @@ const About = () => {
     }
   ];
 
-  const achievements = [
-    "5+ Years of Professional Experience",
-    "100+ Satisfied Clients",
-    "Licensed Chartered Accountant",
-    "Tax Compliance Specialist",
-    "Business Advisory Expert"
-  ];
-
   const teamMembers = [
     {
       name: "CA Sushil Kafle",
@@ -54,22 +46,43 @@ const About = () => {
       initials: "SK",
       phone: "+977 9846750524",
       email: "ca.sushilkafle@gmail.com",
-      description: "CA Sushil Kafle brings over 5 years of experience in tax advisory and accounting services. As a licensed Chartered Accountant, he specializes in tax compliance, financial planning, and business advisory services for businesses across various industries.",
-      image: "/lovable-uploads/0e8059b3-cc37-4e5c-b76b-2f1606ec29f5.png"
+      description: "Sushil Kafle brings over 5 years of experience in tax advisory and accounting services to Tax Sathi. As a licensed Chartered Accountant, he specializes in tax compliance and strategic financial planning, guiding businesses across Nepal's industries with innovative and compliant solutions.",
+      image: "/lovable-uploads/0e8059b3-cc37-4e5c-b76b-2f1606ec29f5.png",
+      achievements: [
+        "5+ Years of Professional Experience",
+        "100+ Satisfied Clients",
+        "Licensed Chartered Accountant",
+        "Tax Compliance Specialist",
+        "Strategic Financial Planner"
+      ]
     },
     {
       name: "Khagendra Chand",
-      position: "Deputy Manager/Director",
+      position: "Director",
       initials: "KC",
-      description: "Experienced professional contributing to the strategic direction and management of our operations.",
-      image: "/lovable-uploads/cb335f14-2346-4558-8ec4-a4697af349e8.png"
+      description: "Khagendra Chand offers over 5 years of expertise in financial management and business consulting at Tax Sathi. He excels in corporate financial strategy and client relations, delivering tailored solutions for Nepal's diverse sectors, ensuring operational excellence and client satisfaction.",
+      image: "/lovable-uploads/cb335f14-2346-4558-8ec4-a4697af349e8.png",
+      achievements: [
+        "5+ Years of Professional Experience",
+        "100+ Satisfied Clients",
+        "Financial Management Expert",
+        "Client Relations Specialist",
+        "Corporate Strategy Advisor"
+      ]
     },
     {
       name: "Sulav Dhoju",
-      position: "Deputy Manager/Director", 
+      position: "Executive Director", 
       initials: "SD",
-      description: "Dedicated professional supporting our commitment to excellence in financial services and client satisfaction.",
-      image: "/lovable-uploads/93e6419a-89d3-42bf-b5f9-4311c8c3ce1c.png"
+      description: "Sulav Dhoju contributes over 5 years of expertise in strategic oversight and business development to Tax Sathi. He specializes in operational leadership and client engagement, driving innovative financial solutions for Nepal's businesses with vision and precision.",
+      image: "/lovable-uploads/93e6419a-89d3-42bf-b5f9-4311c8c3ce1c.png",
+      achievements: [
+        "5+ Years of Professional Experience",
+        "100+ Satisfied Clients",
+        "Operational Leadership Expert",
+        "Business Development Specialist",
+        "Client Engagement Expert"
+      ]
     }
   ];
 
@@ -210,16 +223,14 @@ const About = () => {
                         {member.description}
                       </p>
                       
-                      {index === 0 && (
-                        <div className="space-y-4">
-                          {achievements.map((achievement, idx) => (
-                            <div key={idx} className="flex items-center space-x-3">
-                              <CheckCircle className="w-5 h-5 text-brand-green" />
-                              <span className="text-white/90">{achievement}</span>
-                            </div>
-                          ))}
-                        </div>
-                      )}
+                      <div className="space-y-4">
+                        {member.achievements.map((achievement, idx) => (
+                          <div key={idx} className="flex items-center space-x-3">
+                            <CheckCircle className="w-5 h-5 text-brand-green" />
+                            <span className="text-white/90">{achievement}</span>
+                          </div>
+                        ))}
+                      </div>
                     </div>
                   </div>
                 </CardContent>
