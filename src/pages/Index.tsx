@@ -60,20 +60,23 @@ const Index = () => {
 
   const testimonials = [
     {
-      name: "Rajesh Sharma",
-      company: "ABC Trading Pvt. Ltd.",
+      name: "Rajan Kuwar",
+      position: "Director",
+      company: "Multimate Pvt. Ltd.",
       text: "Tax Sathi has been instrumental in streamlining our financial processes. Their expertise and attention to detail are unmatched.",
       rating: 5
     },
     {
-      name: "Priya Patel",
-      company: "Tech Solutions Nepal",
+      name: "Bijay Limbu",
+      position: "Chairman",
+      company: "Info Tech Store",
       text: "Professional, reliable, and always available when we need them. Highly recommended for any business.",
       rating: 5
     },
     {
-      name: "Kumar Thapa",
-      company: "Mountain View Restaurant",
+      name: "Surya Kharel",
+      position: "Director",
+      company: "Hotel Suramma",
       text: "Their tax planning advice saved us significant money. Truly where accuracy meets trust!",
       rating: 5
     }
@@ -206,10 +209,11 @@ const Index = () => {
                   <p className="text-white/90 mb-6 italic leading-relaxed">
                     "{testimonial.text}"
                   </p>
-                  <div className="text-sm">
-                    <p className="text-white font-semibold">{testimonial.name}</p>
-                    <p className="text-white/70">{testimonial.company}</p>
-                  </div>
+                   <div className="text-sm">
+                     <p className="text-white font-semibold">{testimonial.name}</p>
+                     <p className="text-brand-green font-medium">{testimonial.position}</p>
+                     <p className="text-white/70">{testimonial.company}</p>
+                   </div>
                 </CardContent>
               </Card>
             ))}
