@@ -52,6 +52,7 @@ const About = () => {
         "5+ Years of Professional Experience",
         "100+ Satisfied Clients",
         "Licensed Chartered Accountant",
+        "FDI & Foreign Direct Investment Expert",
         "Tax Compliance Specialist",
         "Strategic Financial Planner"
       ]
@@ -66,6 +67,7 @@ const About = () => {
         "5+ Years of Professional Experience",
         "100+ Satisfied Clients",
         "Financial Management Expert",
+        "International Money Transfer Specialist",
         "Client Relations Specialist",
         "Corporate Strategy Advisor"
       ]
@@ -79,6 +81,7 @@ const About = () => {
       achievements: [
         "5+ Years of Professional Experience",
         "100+ Satisfied Clients",
+        "Due Diligence Specialist",
         "Operational Leadership Expert",
         "Business Development Specialist",
         "Client Engagement Expert"
