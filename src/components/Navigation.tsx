@@ -36,7 +36,7 @@ const Navigation = () => {
             <img 
               src="/lovable-uploads/1aa18539-7d9c-43cb-9616-ae539bc0c586.png" 
               alt="Tax Sathi Pvt. Ltd. Logo" 
-              className="h-12 w-auto drop-shadow-lg"
+              className="h-12 w-auto drop-shadow-lg opacity-90"
             />
           </Link>
 

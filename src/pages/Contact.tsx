@@ -51,7 +51,7 @@ const Contact = () => {
   const offices = [
     {
       type: "Head Office",
-      location: "Opposite Singha Durbar",
+      location: "Anamnagar, Kathmandu opposite of Singha Durbar East Gate",
       city: "Kathmandu"
     },
     {
@@ -300,7 +300,7 @@ const Contact = () => {
                     className="bg-brand-green text-black hover:bg-brand-green/90"
                   >
                     <a 
-                      href="https://maps.google.com/?q=Opposite+Singha+Durbar,Kathmandu" 
+                      href="https://maps.google.com/?q=Anamnagar+Kathmandu+opposite+Singha+Durbar+East+Gate" 
                       target="_blank" 
                       rel="noopener noreferrer"
                     >

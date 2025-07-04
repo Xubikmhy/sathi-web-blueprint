@@ -102,7 +102,7 @@ const Index = () => {
             <img 
               src="/lovable-uploads/1aa18539-7d9c-43cb-9616-ae539bc0c586.png" 
               alt="Tax Sathi Pvt. Ltd. Logo" 
-              className="h-32 w-auto drop-shadow-2xl"
+              className="h-32 w-auto drop-shadow-2xl opacity-90"
             />
           </div>
           

@@ -13,7 +13,7 @@ const Footer = () => {
               <img 
                 src="/lovable-uploads/1aa18539-7d9c-43cb-9616-ae539bc0c586.png" 
                 alt="Tax Sathi Pvt. Ltd. Logo" 
-                className="h-12 w-auto drop-shadow-lg"
+                className="h-12 w-auto drop-shadow-lg opacity-90"
               />
             </Link>
             <p className="text-white/80 text-sm leading-relaxed">
@@ -93,7 +93,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-3">
                 <MapPin size={16} className="text-brand-green" />
-                <span className="text-white/80 text-sm">Opposite Singha Durbar, Kathmandu</span>
+                <span className="text-white/80 text-sm">Anamnagar, Kathmandu opposite of Singha Durbar East Gate</span>
               </div>
             </div>
           </div>

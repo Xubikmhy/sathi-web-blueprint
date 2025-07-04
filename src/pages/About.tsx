@@ -151,9 +151,9 @@ const About = () => {
   const offices = [
     {
       type: "Head Office",
-      location: "Opposite Singha Durbar",
+      location: "Anamnagar, Kathmandu opposite of Singha Durbar East Gate",
       city: "Kathmandu",
-      contact: "Opposite Singha Durbar"
+      contact: "Anamnagar, Kathmandu opposite of Singha Durbar East Gate"
     },
     {
       type: "Branch Office",
