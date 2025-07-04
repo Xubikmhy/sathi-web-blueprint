@@ -95,7 +95,7 @@ const About = () => {
       position: "Marketing Manager",
       initials: "SA",
       description: "Subash Aryal brings dynamic marketing expertise and strategic communication skills to Tax Sathi. As Marketing Manager, he specializes in brand development, client outreach and digital marketing strategies, ensuring Tax Sathi's services reach the right audience effectively.",
-      image: "/lovable-uploads/93e6419a-89d3-42bf-b5f9-4311c8c3ce1c.png",
+      image: "/lovable-uploads/b26992ca-26c9-49f5-a619-f590c516eb6c.png",
       achievements: [
         "Marketing Strategy Expert",
         "Brand Development Specialist",
@@ -109,7 +109,7 @@ const About = () => {
       position: "Executive Director",
       initials: "SB", 
       description: "Sushila Basnet contributes extensive expertise in media and mass communication to Tax Sathi. As Executive Director, she specializes in strategic communications, public relations and stakeholder engagement, bridging the gap between complex financial services and clear client communication.",
-      image: "/lovable-uploads/93e6419a-89d3-42bf-b5f9-4311c8c3ce1c.png",
+      image: "/lovable-uploads/048f6626-c735-418b-bfa6-e919e63274ad.png",
       achievements: [
         "Media & Mass Communication Expert",
         "Strategic Communications Leader",
