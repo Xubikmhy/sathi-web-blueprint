@@ -51,7 +51,7 @@ const Contact = () => {
   const offices = [
     {
       type: "Head Office",
-      location: "Anamanagar, opposite of east Singhadarbar gate",
+      location: "Opposite Singha Durbar",
       city: "Kathmandu"
     },
     {
@@ -190,7 +190,7 @@ const Contact = () => {
                     <div>
                       <h3 className="text-lg font-semibold text-white mb-2">Phone</h3>
                       <p className="text-white/80">+977 9846750524</p>
-                      <p className="text-white/60 text-sm mt-1">Available Mon-Fri, 9 AM - 6 PM</p>
+                      <p className="text-white/60 text-sm mt-1">Available anytime</p>
                     </div>
                   </div>
                 </CardContent>
@@ -241,9 +241,8 @@ const Contact = () => {
                     <div>
                       <h3 className="text-lg font-semibold text-white mb-2">Business Hours</h3>
                       <div className="text-white/80 space-y-1">
-                        <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
-                        <p>Saturday: 10:00 AM - 4:00 PM</p>
-                        <p>Sunday: Closed</p>
+                        <p>Sunday - Friday: 10:00 AM - 6:00 PM</p>
+                        <p>Saturday: Closed</p>
                       </div>
                     </div>
                   </div>
@@ -301,7 +300,7 @@ const Contact = () => {
                     className="bg-brand-green text-black hover:bg-brand-green/90"
                   >
                     <a 
-                      href="https://maps.google.com/?q=Anamanagar,Kathmandu" 
+                      href="https://maps.google.com/?q=Opposite+Singha+Durbar,Kathmandu" 
                       target="_blank" 
                       rel="noopener noreferrer"
                     >

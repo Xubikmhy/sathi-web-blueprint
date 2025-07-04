@@ -92,9 +92,9 @@ const About = () => {
     },
     {
       name: "Subash Aryal",
-      position: "Marketing Manager",
+      position: "Chief Marketing Officer",
       initials: "SA",
-      description: "Subash Aryal brings dynamic marketing expertise and strategic communication skills to Tax Sathi. As Marketing Manager, he specializes in brand development, client outreach and digital marketing strategies, ensuring Tax Sathi's services reach the right audience effectively.",
+      description: "Subash Aryal brings dynamic marketing expertise and strategic communication skills to Tax Sathi. As Chief Marketing Officer, he specializes in brand development, client outreach and digital marketing strategies, ensuring Tax Sathi's services reach the right audience effectively.",
       image: "/lovable-uploads/b26992ca-26c9-49f5-a619-f590c516eb6c.png",
       achievements: [
         "Marketing Strategy Expert",
@@ -109,7 +109,7 @@ const About = () => {
       position: "Executive Director",
       initials: "SB", 
       description: "Sushila Basnet contributes extensive expertise in media and mass communication to Tax Sathi. As Executive Director, she specializes in strategic communications, public relations and stakeholder engagement, bridging the gap between complex financial services and clear client communication.",
-      image: "/lovable-uploads/048f6626-c735-418b-bfa6-e919e63274ad.png",
+      image: "/lovable-uploads/d8fd2f31-9b99-448a-bad0-b78dbd05b8be.png",
       achievements: [
         "Media & Mass Communication Expert",
         "Strategic Communications Leader",
@@ -117,15 +117,43 @@ const About = () => {
         "Stakeholder Engagement Expert",
         "Corporate Communications Director"
       ]
+    },
+    {
+      name: "Ram Dahal",
+      position: "Human Resource Manager",
+      initials: "RD",
+      description: "Ram Dahal brings comprehensive human resource management expertise to Tax Sathi. As Human Resource Manager, he specializes in talent acquisition, employee development and organizational culture, ensuring Tax Sathi maintains a high-performing and motivated team.",
+      image: "/lovable-uploads/0d6aea12-3090-4d84-b678-3af14c08be73.png",
+      achievements: [
+        "Human Resource Management Expert",
+        "Talent Acquisition Specialist",
+        "Employee Development Leader",
+        "Organizational Culture Expert",
+        "Performance Management Professional"
+      ]
+    },
+    {
+      name: "Shushil Upadhyaya",
+      position: "Chief Technical Officer",
+      initials: "SU",
+      description: "Shushil Upadhyaya contributes extensive technical expertise and innovation leadership to Tax Sathi. As Chief Technical Officer, he specializes in technology strategy, digital transformation and system optimization, driving Tax Sathi's technological advancement.",
+      image: "/lovable-uploads/201f31a6-369d-4ecd-bf74-d3137ef260b5.png",
+      achievements: [
+        "Technology Strategy Expert",
+        "Digital Transformation Leader",
+        "System Optimization Specialist",
+        "Innovation Management Professional",
+        "Technical Architecture Expert"
+      ]
     }
   ];
 
   const offices = [
     {
       type: "Head Office",
-      location: "Anamanagar, opposite of east gate of Singhadarbar",
+      location: "Opposite Singha Durbar",
       city: "Kathmandu",
-      contact: "Anamanagar, opposite of east Singhadarbar gate"
+      contact: "Opposite Singha Durbar"
     },
     {
       type: "Branch Office",
