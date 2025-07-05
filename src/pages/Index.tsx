@@ -100,7 +100,7 @@ const Index = () => {
           {/* Logo */}
           <div className="flex justify-center mb-8">
             <img 
-              src="/lovable-uploads/1aa18539-7d9c-43cb-9616-ae539bc0c586.png" 
+              src="/lovable-uploads/5df6a970-6026-4e21-ad38-7f6ed20d02dd.png" 
               alt="Tax Sathi Pvt. Ltd. Logo" 
               className="h-32 w-auto drop-shadow-2xl opacity-90"
             />
@@ -115,7 +115,7 @@ const Index = () => {
           </p>
           
           <p className="text-lg text-white/80 mb-12 max-w-2xl mx-auto leading-relaxed">
-            Professional tax advisory and accounting services in Kathmandu. 
+            Professional tax advisory and accounting services in Nepal. 
             Expert financial solutions for individuals and businesses.
           </p>
           

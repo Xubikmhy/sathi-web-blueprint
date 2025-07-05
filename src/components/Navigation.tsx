@@ -34,7 +34,7 @@ const Navigation = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3">
             <img 
-              src="/lovable-uploads/1aa18539-7d9c-43cb-9616-ae539bc0c586.png" 
+              src="/lovable-uploads/5df6a970-6026-4e21-ad38-7f6ed20d02dd.png" 
               alt="Tax Sathi Pvt. Ltd. Logo" 
               className="h-12 w-auto drop-shadow-lg opacity-90"
             />
@@ -46,7 +46,7 @@ const Navigation = () => {
               <Link
                 key={item.name}
                 to={item.path}
-                className={`text-white hover:text-green-300 transition-colors duration-300 font-medium ${
+                className={`text-white transition-colors duration-300 font-medium ${
                   location.pathname === item.path ? 'text-green-300' : ''
                 }`}
               >
@@ -75,7 +75,7 @@ const Navigation = () => {
               <Link
                 key={item.name}
                 to={item.path}
-                className={`block text-white hover:text-green-300 transition-colors duration-300 font-medium py-2 ${
+                className={`block text-white transition-colors duration-300 font-medium py-2 ${
                   location.pathname === item.path ? 'text-green-300' : ''
                 }`}
                 onClick={() => setIsOpen(false)}
